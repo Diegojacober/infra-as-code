@@ -48,7 +48,7 @@ resource "aws_s3_bucket_acl"  "static_site_bucket" {
 
   acl = "public-read"
   depends_on = [
-  aws_s3_bucket_ownership_controls.site,
-  aws_s3_bucket_public_access_block.site
+  aws_s3_bucket_ownership_controls.static_site_bucket,
+  aws_s3_bucket_public_access_block.static_site_bucket
   ]
 }
